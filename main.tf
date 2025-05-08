@@ -92,7 +92,7 @@ resource "vsphere_virtual_machine" "linux_vms" {
       }
 
       network_interface {
-        ipv4_address = "192.168.1.${100 + count.index}"
+        ipv4_address = "192.168.1.${200 + count.index}"
         ipv4_netmask = 24
       }
 
