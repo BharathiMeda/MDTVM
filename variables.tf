@@ -1,9 +1,13 @@
-variable "linux_vm_count" {
+variable "app_vm_count" {
   description = "Number of Linux VMs to create"
   default     = 2
 }
 
-variable "windows_vm_count" {
+variable "web_vm_count" {
+  description = "Number of Windows VMs to create"
+  default     = 2
+}
+variable "db_vm_count" {
   description = "Number of Windows VMs to create"
   default     = 2
 }
@@ -33,7 +37,7 @@ variable "domain_designator" {
   default     = "A"
 }
 
-variable "server_function_linux" {
+/*variable "server_function_linux" {
   description = "Server function for Linux VMs (e.g., APP, WEB, DB)"
   default     = "APP"
 }
@@ -46,14 +50,10 @@ variable "server_function_windows" {
 variable "environment" {
   description = "Environment code (D for Dev, T for Test, leave blank for Prod)"
   default     = "D"
-}
+}*/
 
-variable "cluster_node_linux" {
+variable "cluster_node" {
   description = "Cluster node identifier for Linux VMs (e.g., A, B, C, D)"
   default     = ""
 }
 
-variable "cluster_node_windows" {
-  description = "Cluster node identifier for Windows VMs (e.g., A, B, C, D)"
-  default     = ""
-}
