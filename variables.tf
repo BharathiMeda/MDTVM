@@ -41,20 +41,10 @@ variable "domain_designator" {
   description = "Domain designator (e.g., A for the first domain)"
   default     = "A"
 }
-
-/*variable "server_function_linux" {
-  description = "Server function for Linux VMs (e.g., APP, WEB, DB)"
-  default     = "APP"
-}
-
-variable "server_function_windows" {
-  description = "Server function for Windows VMs (e.g., APP, WEB, DB)"
-  default     = "WEB"
-}
-
 variable "environment" {
   description = "Environment code (D for Dev, T for Test, leave blank for Prod)"
   default     = "D"
-}*/
+}
+
 
 
