@@ -1,14 +1,14 @@
 variable "app_vm_count" {
-  description = "Number of Linux VMs to create"
+  description = "Number of VMs to create"
   default     = 2
 }
 
 variable "web_vm_count" {
-  description = "Number of Windows VMs to create"
+  description = "Number of VMs to create"
   default     = 2
 }
 variable "db_vm_count" {
-  description = "Number of Windows VMs to create"
+  description = "Number of VMs to create"
   default     = 2
 }
 
@@ -21,6 +21,11 @@ variable "windows_template" {
   description = "Template name for Windows VM"
   default     = "Windows_Template"
 }
+variable "cluster_node" {
+  description = "Cluster node identifier for Linux VMs (e.g., A, B, C, D)"
+  default     = ""
+}
+
 
 variable "airport_code" {
   description = "Closest international airport code"
@@ -52,8 +57,4 @@ variable "environment" {
   default     = "D"
 }*/
 
-variable "cluster_node" {
-  description = "Cluster node identifier for Linux VMs (e.g., A, B, C, D)"
-  default     = ""
-}
 
