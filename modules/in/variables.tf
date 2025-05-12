@@ -1,5 +1,4 @@
 variable "VM_count" {}
-variable "airportL_code" {}
 variable "server_function" {
     default = "in"
 }
