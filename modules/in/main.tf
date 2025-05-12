@@ -26,7 +26,7 @@ resource "vsphere_virtual_machine" "in"  {
 
     customize {
       linux_options {
-        host_name  = "${var.airportL_code}l${var.server_function}${format("%03d", count.index + 1)}"
+        host_name  = "${lower(var.airport_code)}l${var.server_function}${format("%03d", count.index + 1)}"
         domain      = "corp.medtronic.com"        
       }
 
