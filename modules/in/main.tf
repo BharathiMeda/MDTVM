@@ -1,7 +1,7 @@
 resource "vsphere_virtual_machine" "in"  {
   count            = var.VM_count
   #server_function     = in
-  name             = "${var.airportL_code}l${var.server_function}${format("%03d", count.index + 1)}"
+  name             = "${lower(var.airport_code)}l${var.server_function}${format("%03d", count.index + 1)}"
   resource_pool_id = var.resource_pool_id
   datastore_id     = var.datastore_id
   firmware = "efi"
