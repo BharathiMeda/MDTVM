@@ -1,6 +1,6 @@
 resource "vsphere_virtual_machine" "db"  {
   count            = var.VM_count
-  #server_function    = DB
+  #cluster_node     = var.cluster_node
   name             = "${var.airport_code}M${var.forest_designator}${var.domain_designator}${var.server_function}${var.environment}${format("%04d", count.index + 1)}"
   resource_pool_id = var.resource_pool_id
   datastore_id     = var.datastore_id
