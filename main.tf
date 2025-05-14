@@ -5,7 +5,7 @@ module "app" {
   server_function = "APP" 
   template_id = var.linux_template
   guest_id  = data.vsphere_virtual_machine.linux_template.guest_id
-  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  #resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   network_id   = data.vsphere_network.network.id
   adapter_type = data.vsphere_virtual_machine.linux_template.network_interface_types[0]
@@ -24,7 +24,7 @@ module "web" {
   cluster_node = ""
   template_id = var.windows_template
   guest_id  = data.vsphere_virtual_machine.windows_template.guest_id
-  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  #resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   network_id   = data.vsphere_network.network.id
   adapter_type = data.vsphere_virtual_machine.windows_template.network_interface_types[0]
@@ -43,7 +43,7 @@ module "db" {
   cluster_node = ""
   template_id = var.windows_template
   guest_id  = data.vsphere_virtual_machine.windows_template.guest_id
-  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  #resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   network_id   = data.vsphere_network.network.id
   adapter_type = data.vsphere_virtual_machine.windows_template.network_interface_types[0]
@@ -58,7 +58,7 @@ module "in" {
   server_function = "IN"  
   template_id = var.linux_template
   guest_id  = data.vsphere_virtual_machine.linux_template.guest_id
-  resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
+  #resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
   datastore_id     = data.vsphere_datastore.datastore.id
   network_id   = data.vsphere_network.network.id
   adapter_type = data.vsphere_virtual_machine.linux_template.network_interface_types[0]
