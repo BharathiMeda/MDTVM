@@ -1,5 +1,5 @@
 variable "VM_count" {}
-variable "airportL_code" {}
+variable "airport_code" {}
 variable "server_function" {
     default = "ap"
 }
