@@ -50,10 +50,6 @@ variable "environment" {
   description = "Environment code (D for Dev, T for Test, leave blank for Prod)"
   default     = "D"
 }
-variable "airportL_code" {
-  description = "Closest international airport code"
-  default     = "msp"
-}
 
 variable "server_function" {
   description = "role of the VM"
